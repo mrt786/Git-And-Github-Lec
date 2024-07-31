@@ -1,0 +1,64 @@
+the terminal must be opened in the folder where your files lies
+after that git in the folder to make a first version history in the folder
+git init
+
+git status tells which changes were committed
+file:///home/rehan/Documents/Git%20And%20GitHub/Git
+
+now which folder you want to add in the 
+git add . all the files/sub folders in the folder other than that we have to tell the name of the specific folder
+
+to create a new version we use this command 
+git commit -m "message here" -m means we are attaching a message to the version
+
+git config --global user.email "your Email here"
+git config --global user.name "your username here"
+
+git commit --ammend --reset-author
+
+git log how many verisons are there
+
+
+git commit -m "message here" --ammend means that ammend to the previous 
+
+From the code editor(vs code) you can also add the files or folders by clicking the + button that is after the file/folder instead of running commands on terminal
+
+Changes and Stagged Changes:
+    changes that are made in the file without adding the new version of the file in the version history, stagged changes are those that 
+    were added in the version
+
+Unstage Changes:
+    by clicking the minus 
+    or git reset fileName/folder it will Unstage all the changes that are made in all the subfolders  commands on the terminal
+    git reset .
+
+Dicard the changes by git checkout -- fileName or . also do from the terminal
+
+Switching between different Versions:
+    git checkout commit hash
+    commit hash is something like this b67cb0318143d9a2c966dc34e3e8e253a76449ef
+    check the code it will be on the version
+    IF you want to move a specific file:
+        git checkout commitHash fileName/folderName or .
+git log shows you all of the commits before this version
+
+To show all we use 
+git log --all 
+
+Git version history can also make this possible (Branching Effect)to make sub versions like v1,v2,v3 from v1 we can make more but this is not possible in google Documents
+
+git log --all --graph will show the branching effect in
+
+To move to branch latest verison use this command git checkout master/main
+
+If you donot want to restore to a specific verison you have to first move back to the previous version by removing all the chnages by git checkout commitHash . and after that 
+
+Shortcut commands that you can use like git status instead of this you can use s for this 
+git config --global alias.s "status"
+git config --global alias.cm "commit -m"
+
+how to ignore some files that you donot want to ignore
+make a .gitignore and add the filename in it
+
+how to remove the git:
+    rm -rf .git

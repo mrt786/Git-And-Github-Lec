@@ -1,0 +1,61 @@
+Repo = Repository
+
+to link your Github repo to the git repo use this command:
+    git remote nickName to the github repo. Conventially we call this as origin
+
+    second we have to give the url of the github repo
+    
+    git remote add origin "Link to the github repo which will be in the form of https"
+    
+    to check that whether it is linked or not use this command:
+    
+    git remote
+    
+    git remote -v it will give you more details
+
+    to remove this we use 
+    git remote remove nickNameYouHaveGiven
+    Push and Pull push means uploading on github and
+
+    git config --global cardinential.username "add your github username here"
+
+    git push nickName and which branch of the commits you want to push i.e master
+    git push origin master
+
+    if the repo is newly created:
+        git branch -M main
+        git remote add origin repoLink
+        git push -u origin main
+
+    if not then:
+        git remote add origin repLink
+        git branch -M main
+        git push -u origin main
+
+
+    If some issues occur then use the personal token access:
+        go to the github settings and then got to the developer setting . Click on the personal access tokens then generate a new token
+        check the repo in the select scopes section
+        save this token to a place as it would not be appear after that 
+        and use this instead of passowrds
+
+    To check the remote tracking branch:
+        git log --all --graph it will show you like this (HEAD, origin(i.e nickName)/master, master)
+        first add the commit into the version history
+
+    If you want to add more commits:
+        git push orgin master (it only pushes the commits if donot pushes the changes)
+        if the terminal says everything is upto date, you've updated to the latest
+        git push orgin master --set-upstream
+        after the above command simply write this command 
+        git push
+
+    This command will do the branching off:
+        this will overroad this existing commit
+        git commit --amend -m "V12"
+        it is a bad practice and it will be allowed using this command
+        git remote add origin repLink -f
+
+    From Github to Computer:
+        git clone linkToRemoteRepository folderName
+        if you donot give the folder name, it will exactly download with the same folderName
