@@ -15,7 +15,7 @@ to link your Github repo to the git repo use this command:
 
     to remove this we use 
     git remote remove nickNameYouHaveGiven
-    Push and Pull push means uploading on github and
+    Push and Pull push means uploading on github and downloading
 
     git config --global cardinential.username "add your github username here"
 
@@ -28,7 +28,7 @@ to link your Github repo to the git repo use this command:
         git push -u origin main
 
     if not then:
-        git remote add origin repLink
+        git remote add origin repoLink
         git branch -M main
         git push -u origin main
 
@@ -44,7 +44,7 @@ to link your Github repo to the git repo use this command:
         first add the commit into the version history
 
     If you want to add more commits:
-        git push orgin master (it only pushes the commits if donot pushes the changes)
+        git push origin master (it only pushes the commits if donot pushes the changes)
         if the terminal says everything is upto date, you've updated to the latest
         git push orgin master --set-upstream
         after the above command simply write this command 
@@ -59,3 +59,7 @@ to link your Github repo to the git repo use this command:
     From Github to Computer:
         git clone linkToRemoteRepository folderName
         if you donot give the folder name, it will exactly download with the same folderName
+        
+        git clone repostioryLink
+        cd repositoryName
+        git pull origin main/master
